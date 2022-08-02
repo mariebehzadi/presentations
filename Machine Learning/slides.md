@@ -1,47 +1,27 @@
 ---
-# try also 'default' to start simple
 theme: unicorn
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: "text-center"
-# https://sli.dev/custom/highlighters.html
+class: text-center
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
-# use UnoCSS (experimental)
 css: unocss
+title: Machine Learning | Marie Behzadi
+layout: intro
+introImage: "/static/img/marie.jpg"
 ---
 
-# Welcome to Slidev
+# Different Types of Learning
 
-Presentation slides for developers
+#### Machine Learning Techniques to solve problems
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
+By Marie Behzadi <mariebehzadi@gmail.com>
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
@@ -49,329 +29,274 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# What is Slidev?
+# What is Machine Learning?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+- Machine learning is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence.
+- The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data.
+- There are many different types of learning that you may encounter as a practitioner in the field of machine learning: from whole fields of study to specific techniques.
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+---
+
+# Types of Learning
+
+<br>
+
+### Learning Problems
+  1. Supervised Learning
+  2. Unsupervised Learning
+  3. Reinforcement Learning
+
+<br>
+
+### Hybrid Learning Problems
+  4. Semi-Supervised Learning
+  5. Self-Supervised Learning
+  6. Multi-Instance Learning
+
+<br>
+
+### Statistical Inference
+  7. Inductive Learning
+  8. Deductive Inference
+  9. Transductive Learning
+
+<br>
+
+### Learning Techniques
+  10. Multi-Task Learning
+  11. Active Learning
+  12. Online Learning
+  13. Transfer Learning
+  14. Ensemble Learning
+
 
 ---
 
-# Navigation
+layout: cover-logos
+logos: [
+'/static/img/chakra.png',
+'/static/img/graphql.png',
+'/static/img/rjsf.png',
+]
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+---
 
-### Keyboard Shortcuts
+# What will I learn?
 
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
+### through this Project
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
+<br />
 
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
+- **Chakra UI** - No previous experience
+- **GraphQL** - basic knowledge
+- **RJSF** - similar experience in Vue.js
 
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<style>
+
+</style>
 
 ---
 
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: /static/img/clean-code.png
 
 ---
 
-# Code
+# Clean Code Techniques
 
-Use code snippets and get the highlighting directly![^1]
+As I mentioned before, I try to be very organized and clean when it comes to programming. It is absolutely necessary to define guidelines and code rules between multiple programmers in a team and it has a lot of pros to follow the same structure:
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: string;
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id);
-  const newUser = { ...user, ...update };
-  saveUser(id, newUser);
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+- Easier to Understand, Debug and Maintain
+- Easier to Test
+- Cost Savings
+- Reusability
+- Simplicity in Large Scale projects
+- Avoid continuous Conflicts in Code
+- Avoid continuous Conflicts between programmers
+- Avoid Refactoring the same code over and over
+- Happiness for Everyone!
 
 ---
 
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
+layout: image-right
+image: /static/img/structure.png
 
 ---
 
-## class: px-20
+# Clean Code Techniques
 
-# Themes
+### 1. Folder Structure
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-## preload: false
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div v-motion :initial="{ x: -80 }" :enter="{ x: 0 }">Slidev</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+Structuring a project’s folders in a manner that fits the project’s size and intent is key to scalability and maintainability. There also is no single correct answer for what a perfect folder structure looks like. But we have to define a basic structure which seems to be the best solution for our project.
 
 <br>
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+### 2. Naming Conventions
 
-Block
-
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+This stage is very critical because we will be defining the best way to describe files, variables, functions and classes. We can even go further by using conventions which indicate variable scopes.
 
 ---
 
-# Diagrams
+layout: image-right
+image: /static/img/formatting.png
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+---
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+# Clean Code Techniques
 
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+### 3. Code Formatting
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+Sometimes software developers write code that is bunched up and smashed together, leaving absolutely no blank spaces. As a result, the code is really hard to read. Solid walls of text aren’t very inviting or readable.
 
-```plantuml {scale: 0.7}
-@startuml
+When we work on a large-scale project and the number of developers are more than justr one person, It's necessary to define formatting rules to avoid constant changes and conflicts in git.
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
+I recommend the following DevTools with the same rule sets to avoid conflicts between them:
 
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
+- [**ESLint**](https://eslint.org/)
+- [**Prettier**](https://prettier.io/)
+- [**Husky**](https://typicode.github.io/husky/#/)
 
-cloud {
-  [Example 1]
-}
+---
 
+layout: image-right
+image: /static/img/documentation.png
 
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
+---
 
+# Clean Code Techniques
 
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
+### 4. Documentations
 
-@enduml
-```
+Code Documentation is very important when facing a complicated and large project. I have created two types of documentations for my projects so far: documentation inside the code and supporting documentation about the code.
+
+As the projects grows bigger and ages, going back and understanding previous codes can be overwelming and time-consuming. So it's really necessary to provide additional information on each section of the code to increase and improve maintaining process.
+
+I recommend the following techniques in order to provide code documentations:
+
+- Simple, Short and Understandable Comments in Code
+- Using Documentation Tools like [**Storybook**](https://storybook.js.org/)
+
+---
+
+# Previous Work
+
+### 1. Heart Holter Monitor Project
+
+<br />
+
+<div grid="~ cols-3 gap-2" m="-t-2">
+
+<img border="rounded" src="/static/img/hho-1.png">
+
+<img border="rounded" src="/static/img/hho-2.png">
+
+<img border="rounded" src="/static/img/hho-3.png">
 
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+<br />
+
+#### Technical Details
+
+<p>
+React.js + Golang + RESTful API + PostgreSQL <br>
+4 types of users and permissions + different dashboards <br>
+Generate Forms based on JSON Schemas using our custome components <br>
+Desktop / Web Application  
+</p>
+
+---
+
+# Previous Work
+
+### 2. Reception Application
+
+<br />
+
+<div grid="~ cols-3 gap-2" m="-t-2">
+
+<img border="rounded" src="/static/img/reception-1.png">
+
+<img border="rounded" src="/static/img/reception-2.png">
+
+<img border="rounded" src="/static/img/reception-3.png">
+
+</div>
+
+<br />
+
+#### Technical Details
+
+<p>
+React.js + Golang + RESTful API + PostgreSQL <br>
+3 types of users and permissions + different dashboards <br>
+Design Custome Calendar filtered by day, week, month and year <br>
+Full Accounting System <br>
+Desktop / Web Application
+</p>
+
+---
+
+# Previous Work
+
+### 3. Rheumatology Application
+
+<br />
+
+<div grid="~ cols-3 gap-2" m="-t-2">
+
+<img border="rounded" src="/static/img/rheum-1.png">
+
+<img border="rounded" src="/static/img/rheum-2.png">
+
+<img border="rounded" src="/static/img/rheum-3.png">
+
+</div>
+
+<br />
+
+#### Technical Details
+
+<p>
+React.js + Golang + RESTful API + PostgreSQL <br>
+3 types of users and permissions + different dashboards <br>
+Generate dynamic Forms based on user's edit on form <br>
+Desktop / Web Application
+</p>
+
+---
+
+# Previous Work
+
+### 4. Some of Vue.js based Projects
+
+<br />
+
+<div grid="~ cols-4 gap-2" m="-t-2">
+
+<img border="rounded" src="/static/img/vue-1.png">
+
+<img border="rounded" src="/static/img/vue-2.png">
+
+<img border="rounded" src="/static/img/vue-3.png">
+
+<img border="rounded" src="/static/img/vue-4.png">
+
+</div>
+
+<br />
+
+#### Technical Details
+
+<p>
+Vue.js + Nuxt.js + Golang + RESTful API + PostgreSQL <br>
+Web Application
+</p>
 
 ---
 
@@ -380,6 +305,43 @@ class: text-center
 
 ---
 
-# Learn More
+# Bootstrap vs Material UI vs Chakra UI
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<img class="custom-img" border="rounded" src="/static/img/compare.png">
+
+<style>
+.custom-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+</style>
+
+---
+
+layout: center
+class: text-center
+
+---
+
+# Learn More about React.js
+
+<br />
+
+[official documentations](https://reactjs.org/docs/getting-started.html) · [official tutorials](https://reactjs.org/tutorial/tutorial.html) . [Awesome React](https://github.com/enaqx/awesome-react)
+
+[youtube](https://www.youtube.com/results?search_query=reactjs) . [codewithmosh](https://codewithmosh.com/p/mastering-react) . [GraphQL Intro](https://reactjs.org/blog/2015/05/01/graphql-introduction.html) . [HowToGraphQL](https://www.howtographql.com/)
+
+[RealReactApps](https://github.com/enaqx/awesome-react#real-react-apps) · [Important Talks]() . [React Conferences]()
+
+---
+
+layout: cover
+class: text-center
+
+---
+
+# Thank You
+
+Marie Behzadi

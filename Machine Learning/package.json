@@ -1,5 +1,5 @@
 {
-  "name": "machine-learning",
+  "name": "react-slidev",
   "private": true,
   "scripts": {
     "build": "slidev build",
@@ -7,8 +7,14 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.35.2",
+    "@slidev/cli": "^0.34.3",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "@slidev/theme-shibainu": "^0.0.2",
+    "slidev-theme-penguin": "^1.4.1",
+    "slidev-theme-unicorn": "^1.1.1"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.24.0"
   }
 }
