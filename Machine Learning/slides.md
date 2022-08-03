@@ -3,6 +3,7 @@ theme: unicorn
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
+download: true
 lineNumbers: false
 info: |
   ## Slidev Starter Template
@@ -28,6 +29,13 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+layout: image-center
+image: '/static/img/what-is-data.jpg'
+imageWidth: '750'
+imageHeight: '950'
+---
+
+---
 
 # What is Machine Learning?
 
@@ -46,299 +54,336 @@ Learn more: https://sli.dev/guide/syntax#embedded-styles
 
 <br>
 
-### Learning Problems
-  1. Supervised Learning
-  2. Unsupervised Learning
-  3. Reinforcement Learning
+| <h4>Learning Problems</h4> | <h4>Hybrid Learning Problems </h4> |  <h4>Statistical Inference</h4> |  <h4>Learning Techniques</h4> |
+|----------------|--------------|--------------|--------------|
+| 1. Supervised Learning | 4. Semi-Supervised Learning  | 7. Inductive Learning | 10. Multi-Task Learning
+| 2. Unsupervised Learning | 5. Self-Supervised Learning | 8. Deductive Inference | 11. Active Learning
+| 3. Reinforcement Learning | 6. Multi-Instance Learning | 9. Transductive Learning | 12. Online Learning
+|  |  |  | 13. Transfer Learning
+|  |  |  | 14. Ensemble Learning
+
+
+---
+
+# 1. Supervised Learning
+### Category: Learning Problems
 
 <br>
 
-### Hybrid Learning Problems
-  4. Semi-Supervised Learning
-  5. Self-Supervised Learning
-  6. Multi-Instance Learning
+Supervised learning describes a class of problem that involves using a model to learn a mapping between input examples and the target variable.
+
+There are two main types of supervised learning problems:
+
+- **Classification:** Supervised learning problem that involves predicting a class label.
+- **Regression:** Supervised learning problem that involves predicting a numerical label.
+
+<br> 
+
+Both classification and regression problems may have one or more input variables and input variables may be any data type, such as numerical or categorical.
+
+---
+layout: image-center
+image: '/static/img/supervised-dataset.png'
+imageWidth: '750'
+imageHeight: '950'
+---
+
+## Dataset Example
+
+---
+layout: image-center
+image: '/static/img/supervised-algorithms.png'
+imageWidth: '800'
+imageHeight: '950'
+---
+
+## Dataset Example
+
+---
+layout: image-center
+image: '/static/img/classification.vs.regression.png'
+---
+
+## Classification vs Regression
+
+---
+
+# 2. Unsupervised Learning
+### Category: Learning Problems
 
 <br>
 
-### Statistical Inference
-  7. Inductive Learning
-  8. Deductive Inference
-  9. Transductive Learning
+Unsupervised learning describes a class of problems that involves using a model to describe or extract relationships in data.
+
+Compared to supervised learning, unsupervised learning operates upon only the input data without outputs or target variables. As such, unsupervised learning does not have a teacher correcting the model, as in the case of supervised learning.
+
+There are many types of unsupervised learning, although there are two main problems that are often encountered by a practitioner: 
+
+- **Clustering:** Unsupervised learning problem that involves finding groups in data.
+- **Density Estimation:** Unsupervised learning problem that involves summarizing the distribution of data.
+
+
+<br> 
+
+Additional unsupervised methods may also be used, such as visualization that involves graphing or plotting data in different ways and projection methods that involves reducing the dimensionality of the data.
+
+- **Visualization:** Unsupervised learning problem that involves creating plots of data.
+- **Projection:** Unsupervised learning problem that involves creating lower-dimensional representations of data.
+
+---
+layout: image-center
+image: '/static/img/unsupervised-algorithms.png'
+---
+
+## Unsupervised Learning
+
+---
+layout: image-center
+image: '/static/img/unsupervised-clustering.jpeg'
+---
+
+## Clustering and Density Estimation
+
+
+---
+
+# 3. Reinforcement Learning
+### Category: Learning Problems
 
 <br>
 
-### Learning Techniques
-  10. Multi-Task Learning
-  11. Active Learning
-  12. Online Learning
-  13. Transfer Learning
-  14. Ensemble Learning
+Reinforcement learning describes a class of problems where an agent operates in an environment and must learn to operate using feedback.
 
+Reinforcement learning is learning what to do — how to map situations to actions—so as to maximize a numerical reward signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them.
+
+The use of an environment means that there is no fixed training dataset, rather a goal or set of goals that an agent is required to achieve, actions they may perform, and feedback about performance toward the goal.
+
+---
+layout: image-center
+image: '/static/img/reinforcement-learning.png'
+imageWidth: '800'
+imageHeight: '950'
+---
+
+---
+layout: image-center
+image: '/static/img/reinforcement-learning-cycle.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+## Reinforcement Learning Cycle
 
 ---
 
-layout: cover-logos
-logos: [
-'/static/img/chakra.png',
-'/static/img/graphql.png',
-'/static/img/rjsf.png',
-]
-
----
-
-# What will I learn?
-
-### through this Project
-
-<br />
-
-- **Chakra UI** - No previous experience
-- **GraphQL** - basic knowledge
-- **RJSF** - similar experience in Vue.js
-
-<style>
-
-</style>
-
----
-
-layout: image-right
-image: /static/img/clean-code.png
-
----
-
-# Clean Code Techniques
-
-As I mentioned before, I try to be very organized and clean when it comes to programming. It is absolutely necessary to define guidelines and code rules between multiple programmers in a team and it has a lot of pros to follow the same structure:
-
-- Easier to Understand, Debug and Maintain
-- Easier to Test
-- Cost Savings
-- Reusability
-- Simplicity in Large Scale projects
-- Avoid continuous Conflicts in Code
-- Avoid continuous Conflicts between programmers
-- Avoid Refactoring the same code over and over
-- Happiness for Everyone!
-
----
-
-layout: image-right
-image: /static/img/structure.png
-
----
-
-# Clean Code Techniques
-
-### 1. Folder Structure
-
-Structuring a project’s folders in a manner that fits the project’s size and intent is key to scalability and maintainability. There also is no single correct answer for what a perfect folder structure looks like. But we have to define a basic structure which seems to be the best solution for our project.
+# 4. Semi-Supervised Learning
+### Category: Hybrid Learning Problems
 
 <br>
 
-### 2. Naming Conventions
+Semi-supervised learning is supervised learning where the training data contains very few labeled examples and a large number of unlabeled examples.
 
-This stage is very critical because we will be defining the best way to describe files, variables, functions and classes. We can even go further by using conventions which indicate variable scopes.
+The goal of a semi-supervised learning model is to make effective use of all of the available data, not just the labelled data like in supervised learning.
+
+Many problems from the fields of computer vision (image data), natural language processing (text data), and automatic speech recognition (audio data) fall into this category and cannot be easily addressed using standard supervised learning methods.
+
+### Labeled Data + Unlabeled Data
+### Supervised + Unsupervised
+
+
+---
+layout: image-center
+image: '/static/img/semi-supervised-learning.jpeg'
+imageWidth: '800'
+imageHeight: '950'
+---
 
 ---
 
-layout: image-right
-image: /static/img/formatting.png
+# 5. Self-Supervised Learning
+### Category: Hybrid Learning Problems
+
+<br>
+
+Self-supervised learning refers to an unsupervised learning problem that is framed as a supervised learning problem in order to apply supervised learning algorithms to solve it.
+
+The self-supervised learning framework requires only unlabeled data in order to formulate a pretext learning task such as predicting context or image rotation, for which a target objective can be computed without supervision.
+
+---
+layout: image-center
+image: '/static/img/self-supervised-learning.png'
+imageWidth: '900'
+imageHeight: '950'
+---
+
+## Self Supervised Learning
 
 ---
 
-# Clean Code Techniques
+# 6. Multi-Instance Learning
+### Category: Hybrid Learning Problems
 
-### 3. Code Formatting
+<br>
 
-Sometimes software developers write code that is bunched up and smashed together, leaving absolutely no blank spaces. As a result, the code is really hard to read. Solid walls of text aren’t very inviting or readable.
+Multi-instance learning is a supervised learning problem where individual examples are unlabeled; instead, bags or groups of samples are labeled.
 
-When we work on a large-scale project and the number of developers are more than justr one person, It's necessary to define formatting rules to avoid constant changes and conflicts in git.
+In multi-instance learning, an entire collection of examples is labeled as containing or not containing an example of a class, but the individual members of the collection are not labeled.
 
-I recommend the following DevTools with the same rule sets to avoid conflicts between them:
+Modeling involves using knowledge that one or some of the instances in a bag are associated with a target label, and to predict the label for new bags in the future given their composition of multiple unlabeled examples.
 
-- [**ESLint**](https://eslint.org/)
-- [**Prettier**](https://prettier.io/)
-- [**Husky**](https://typicode.github.io/husky/#/)
+---
+layout: image-center
+image: '/static/img/multiple-instance-learning.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+
+## Multiple-Instance Learning
+
+---
+layout: image-center
+image: '/static/img/multi-instance-example-1.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+
+## Example #1
+
+---
+layout: image-center
+image: '/static/img/multi-instance-example-2.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+
+## Example #2
 
 ---
 
-layout: image-right
-image: /static/img/documentation.png
+# 7. Inductive Learning
+### Category: Statistical Inference
+
+<br>
+
+Inductive learning involves using evidence to determine the outcome.
+
+Inductive reasoning refers to using specific cases to determine general outcomes, e.g. specific to general.
+
+Most machine learning models learn using a type of inductive inference or inductive reasoning where general rules (the model) are learned from specific historical examples (the data).
 
 ---
 
-# Clean Code Techniques
+# 8. Deductive Learning
+### Category: Statistical Inference
 
-### 4. Documentations
+<br>
 
-Code Documentation is very important when facing a complicated and large project. I have created two types of documentations for my projects so far: documentation inside the code and supporting documentation about the code.
+Deduction or deductive inference refers to using general rules to determine specific outcomes.
 
-As the projects grows bigger and ages, going back and understanding previous codes can be overwelming and time-consuming. So it's really necessary to provide additional information on each section of the code to increase and improve maintaining process.
+Deduction is the reverse of induction. If induction is going from the specific to the general, deduction is going from the general to the specific.
 
-I recommend the following techniques in order to provide code documentations:
-
-- Simple, Short and Understandable Comments in Code
-- Using Documentation Tools like [**Storybook**](https://storybook.js.org/)
+Deduction is a top-down type of reasoning that seeks for all premises to be met before determining the conclusion, whereas induction is a bottom-up type of reasoning that uses available data as evidence for an outcome.
 
 ---
 
-# Previous Work
+# 9. Transductive Learning
+### Category: Statistical Inference
 
-### 1. Heart Holter Monitor Project
+<br>
 
-<br />
+Transduction or transductive learning is used in the field of statistical learning theory to refer to predicting specific examples given specific examples from a domain.
 
-<div grid="~ cols-3 gap-2" m="-t-2">
+- **Induction**, deriving the function from the given data. 
+- **Deduction**, deriving the values of the given function for points of interest. 
+- **Transduction**, deriving the values of the unknown function for points of interest from the given data.
 
-<img border="rounded" src="/static/img/hho-1.png">
+<br>
 
-<img border="rounded" src="/static/img/hho-2.png">
+We can contrast these three types of inference in the context of machine learning.
 
-<img border="rounded" src="/static/img/hho-3.png">
 
-</div>
-
-<br />
-
-#### Technical Details
-
-<p>
-React.js + Golang + RESTful API + PostgreSQL <br>
-4 types of users and permissions + different dashboards <br>
-Generate Forms based on JSON Schemas using our custome components <br>
-Desktop / Web Application  
-</p>
+- **Induction:** Learning a general model from specific examples.
+- **Deduction:** Using a model to make predictions.
+- **Transduction:** Using specific examples to make predictions.
 
 ---
 
-# Previous Work
+# 10. Multi-Task Learning
+### Category: Learning Techniques
 
-### 2. Reception Application
+<br>
 
-<br />
+Multi-task learning is a type of supervised learning that involves fitting a model on one dataset that addresses multiple related problems.
 
-<div grid="~ cols-3 gap-2" m="-t-2">
+It involves devising a model that can be trained on multiple related tasks in such a way that the performance of the model is improved by training across the tasks as compared to being trained on any single task.
 
-<img border="rounded" src="/static/img/reception-1.png">
-
-<img border="rounded" src="/static/img/reception-2.png">
-
-<img border="rounded" src="/static/img/reception-3.png">
-
-</div>
-
-<br />
-
-#### Technical Details
-
-<p>
-React.js + Golang + RESTful API + PostgreSQL <br>
-3 types of users and permissions + different dashboards <br>
-Design Custome Calendar filtered by day, week, month and year <br>
-Full Accounting System <br>
-Desktop / Web Application
-</p>
+Multi-task learning can be a useful approach to problem-solving when there is an abundance of input data labeled for one task that can be shared with another task with much less labeled data.
 
 ---
 
-# Previous Work
+# 11. Active Learning
+### Category: Learning Techniques
 
-### 3. Rheumatology Application
+<br>
 
-<br />
+Active learning is a technique where the model is able to query a human user operator during the learning process in order to resolve ambiguity during the learning process.
 
-<div grid="~ cols-3 gap-2" m="-t-2">
+Active learning: The learner adaptively or interactively collects training examples, typically by querying an oracle to request labels for new points.
 
-<img border="rounded" src="/static/img/rheum-1.png">
-
-<img border="rounded" src="/static/img/rheum-2.png">
-
-<img border="rounded" src="/static/img/rheum-3.png">
-
-</div>
-
-<br />
-
-#### Technical Details
-
-<p>
-React.js + Golang + RESTful API + PostgreSQL <br>
-3 types of users and permissions + different dashboards <br>
-Generate dynamic Forms based on user's edit on form <br>
-Desktop / Web Application
-</p>
+Active learning is a type of supervised learning and seeks to achieve the same or better performance of so-called “passive” supervised learning, although by being more efficient about what data is collected or used by the model.
 
 ---
 
-# Previous Work
+# 12. Online Learning
+### Category: Learning Techniques
 
-### 4. Some of Vue.js based Projects
+<br>
 
-<br />
+Online learning involves using the data available and updating the model directly before a prediction is required or after the last observation was made.
 
-<div grid="~ cols-4 gap-2" m="-t-2">
+Traditionally machine learning is performed offline, which means we have a batch of data, and we optimize an equation […] However, if we have streaming data, we need to perform online learning, so we can update our estimates as each new data point arrives rather than waiting until “the end” (which may never occur).
 
-<img border="rounded" src="/static/img/vue-1.png">
-
-<img border="rounded" src="/static/img/vue-2.png">
-
-<img border="rounded" src="/static/img/vue-3.png">
-
-<img border="rounded" src="/static/img/vue-4.png">
-
-</div>
-
-<br />
-
-#### Technical Details
-
-<p>
-Vue.js + Nuxt.js + Golang + RESTful API + PostgreSQL <br>
-Web Application
-</p>
+Generally, online learning seeks to minimize “regret,” which is how well the model performed compared to how well it might have performed if all the available information was available as a batch.
 
 ---
 
-layout: center
-class: text-center
+# 13. Transfer Learning
+### Category: Learning Techniques
+
+<br>
+
+Transfer learning is a type of learning where a model is first trained on one task, then some or all of the model is used as the starting point for a related task.
+
+In transfer learning, the learner must perform two or more different tasks, but we assume that many of the factors that explain the variations in P1 are relevant to the variations that need to be captured for learning P2.
+
+If there is significantly more data in the first setting (sampled from P1), then that may help to learn representations that are useful to quickly generalize from only very few examples drawn from P2. Many visual categories share low-level notions of edges and visual shapes, the effects of geometric changes, changes in lighting, etc.
 
 ---
 
-# Bootstrap vs Material UI vs Chakra UI
+# 14. Ensemble Learning
+### Category: Learning Techniques
 
-<img class="custom-img" border="rounded" src="/static/img/compare.png">
+<br>
 
-<style>
-.custom-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-</style>
+Ensemble learning is an approach where two or more modes are fit on the same data and the predictions from each model are combined.
+
+The objective of ensemble learning is to achieve better performance with the ensemble of models as compared to any individual model. This involves both deciding how to create models used in the ensemble and how to best combine the predictions from the ensemble members.
 
 ---
 
-layout: center
-class: text-center
+# Further Reading
 
----
+<br>
 
-# Learn More about React.js
-
-<br />
-
-[official documentations](https://reactjs.org/docs/getting-started.html) · [official tutorials](https://reactjs.org/tutorial/tutorial.html) . [Awesome React](https://github.com/enaqx/awesome-react)
-
-[youtube](https://www.youtube.com/results?search_query=reactjs) . [codewithmosh](https://codewithmosh.com/p/mastering-react) . [GraphQL Intro](https://reactjs.org/blog/2015/05/01/graphql-introduction.html) . [HowToGraphQL](https://www.howtographql.com/)
-
-[RealReactApps](https://github.com/enaqx/awesome-react#real-react-apps) · [Important Talks]() . [React Conferences]()
-
----
-
-layout: cover
-class: text-center
+- Pattern Recognition and Machine Learning, 2006.
+- Deep Learning, 2016.
+- Reinforcement Learning: An Introduction, 2nd edition, 2018.
+- Data Mining: Practical Machine Learning Tools and Techniques, 4th edition, 2016.
+- The Elements of Statistical Learning: Data Mining, Inference, and Prediction, 2nd edition, 2016.
+- Machine Learning: A Probabilistic Perspective, 2012.
+- Machine Learning, 1997.
+- The Nature of Statistical Learning Theory, 1995.
+- Foundations of Machine Learning, 2nd edition, 2018.
+- Artificial Intelligence: A Modern Approach, 3rd edition, 2015.
 
 ---
 
