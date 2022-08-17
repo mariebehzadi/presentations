@@ -189,7 +189,6 @@ Many problems from the fields of computer vision (image data), natural language 
 ### Labeled Data + Unlabeled Data
 ### Supervised + Unsupervised
 
-
 ---
 layout: image-center
 image: '/static/img/semi-supervised-learning.jpeg'
@@ -197,6 +196,25 @@ imageWidth: '800'
 imageHeight: '950'
 ---
 
+---
+layout: image-center
+image: '/static/img/pseudo-labelling.gif'
+imageWidth: '500'
+imageHeight: '500'
+---
+## Pseudo Labelling
+
+Pseudo labelling is the process of using the labelled data model to predict labels for unlabelled data.
+
+---
+layout: image-center
+image: '/static/img/pseudo-labelling.png'
+imageWidth: '500'
+imageHeight: '500'
+---
+## Pseudo Labelling
+
+Pseudo labelling is the process of using the labelled data model to predict labels for unlabelled data.
 ---
 
 # 5. Self-Supervised Learning
@@ -207,6 +225,15 @@ imageHeight: '950'
 Self-supervised learning refers to an unsupervised learning problem that is framed as a supervised learning problem in order to apply supervised learning algorithms to solve it.
 
 The self-supervised learning framework requires only unlabeled data in order to formulate a pretext learning task such as predicting context or image rotation, for which a target objective can be computed without supervision.
+
+---
+layout: image-center
+image: '/static/img/self-supervised-learning.png'
+imageWidth: '900'
+imageHeight: '950'
+---
+
+## Self Supervised Learning
 
 ---
 layout: image-center
@@ -246,7 +273,10 @@ imageWidth: '700'
 imageHeight: '950'
 ---
 
-## Example #1
+## MIL: Example #1
+#### Binary Classification
+
+The goal of the MIL is to predict the labels of new, unseen bags. 
 
 ---
 layout: image-center
@@ -264,12 +294,19 @@ imageHeight: '950'
 
 <br>
 
+Inductive learning, also known as discovery learning, is a process where the learner discovers rules by observing examples.
+
 Inductive learning involves using evidence to determine the outcome.
 
 Inductive reasoning refers to using specific cases to determine general outcomes, e.g. specific to general.
 
 Most machine learning models learn using a type of inductive inference or inductive reasoning where general rules (the model) are learned from specific historical examples (the data).
 
+This can be very **complex** depending on the data.
+
+it is an effective method used in ML and used in various fields of ML like facial recognition technology, disease cure, and diagnosis, etc. It uses a **bottom-up approach**.
+
+The results are not certain, it can range from **strong to weak**.
 ---
 
 # 8. Deductive Learning
@@ -282,6 +319,25 @@ Deduction or deductive inference refers to using general rules to determine spec
 Deduction is the reverse of induction. If induction is going from the specific to the general, deduction is going from the general to the specific.
 
 Deduction is a top-down type of reasoning that seeks for all premises to be met before determining the conclusion, whereas induction is a bottom-up type of reasoning that uses available data as evidence for an outcome.
+
+Deductive learning uses the already available facts and information in order to give a valid conclusion. It uses a **top-down approach**.
+
+The one major thing to note is that in deductive learning, the results are certain i.e, it is either **yes or no**. 
+
+If induction is going from the specific to the general, deduction is going from the general to the specific.
+
+---
+layout: image-center
+image: '/static/img/inductive-vs-deductive.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+## Inductive vs Deductive
+#### inductive: From observation to conclusion.
+In my opinion, Inductive Learning is similar to data-driven learning. Most of popular ML algorithms are belong to this.
+
+#### deductive: From conclusion to observation.
+In my opinion, it is similar to expert systems. We give rules (conclusion) , and then get the answer ( observation)
 
 ---
 
@@ -306,6 +362,13 @@ We can contrast these three types of inference in the context of machine learnin
 - **Transduction:** Using specific examples to make predictions.
 
 ---
+layout: image-center
+image: '/static/img/relationship.png'
+imageWidth: '700'
+imageHeight: '950'
+---
+## Relationship of Induction and Deduction and Transduction
+---
 
 # 10. Multi-Task Learning
 ### Category: Learning Techniques
@@ -318,6 +381,8 @@ It involves devising a model that can be trained on multiple related tasks in su
 
 Multi-task learning can be a useful approach to problem-solving when there is an abundance of input data labeled for one task that can be shared with another task with much less labeled data.
 
+For example, it is common for a multi-task learning problem to involve the same input patterns that may be used for multiple different outputs or supervised learning problems. In this setup, each output may be predicted by a different part of the model, allowing the core of the model to generalize across each task for the same inputs.
+
 ---
 
 # 11. Active Learning
@@ -327,9 +392,13 @@ Multi-task learning can be a useful approach to problem-solving when there is an
 
 Active learning is a technique where the model is able to query a human user operator during the learning process in order to resolve ambiguity during the learning process.
 
-Active learning: The learner adaptively or interactively collects training examples, typically by querying an oracle to request labels for new points.
+The learner adaptively or interactively collects training examples, typically by querying an oracle to request labels for new points.
 
 Active learning is a type of supervised learning and seeks to achieve the same or better performance of so-called “passive” supervised learning, although by being more efficient about what data is collected or used by the model.
+
+It is not unreasonable to view active learning as an approach to solving semi-supervised learning problems, or an alternative paradigm for the same types of problems.
+
+**Note**: Of course, we human experts tell all of the label, it make nonsense for the algorithm to learn, i.e., algorithm just ask a small part of the unlabeled data, Under this timely small help, active learning algorithm will get a big boost.
 
 ---
 
@@ -357,6 +426,8 @@ In transfer learning, the learner must perform two or more different tasks, but 
 
 If there is significantly more data in the first setting (sampled from P1), then that may help to learn representations that are useful to quickly generalize from only very few examples drawn from P2. Many visual categories share low-level notions of edges and visual shapes, the effects of geometric changes, changes in lighting, etc.
 
+transfer learning is particularly useful with models that are incrementally trained and an existing model can be used as a starting point for continued training, such as deep learning networks.
+
 ---
 
 # 14. Ensemble Learning
@@ -364,10 +435,11 @@ If there is significantly more data in the first setting (sampled from P1), then
 
 <br>
 
-Ensemble learning is an approach where two or more modes are fit on the same data and the predictions from each model are combined.
+Ensemble learning is an approach where two or more models are fit on the same data and the predictions from each model are combined.
 
 The objective of ensemble learning is to achieve better performance with the ensemble of models as compared to any individual model. This involves both deciding how to create models used in the ensemble and how to best combine the predictions from the ensemble members.
 
+Ensemble learning is a useful approach for improving the predictive skill on a problem domain and to reduce the variance of stochastic learning algorithms, such as artificial neural networks.
 ---
 
 # Further Reading
